@@ -1,11 +1,12 @@
-const maindiv = "kanvas";
+//const maindiv = "kanvas";
 
-function init() {
+function init(kanvas) {
   var canvas = document.createElement("canvas");
   canvas.style.width = "100%";
   canvas.style.height = "100%";
   canvas.id = "maincanvas";
-  var element = document.getElementById(maindiv);
+  //var element = document.getElementById(maindiv);
+  var element = kanvas.current;
   element.appendChild(canvas);
 
   var engine = new Engine(canvas, true);
@@ -30,4 +31,4 @@ function init() {
   });
 }
 
-init();
+export { init }
