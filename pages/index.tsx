@@ -1,15 +1,7 @@
 import Link from 'next/link'
 import Layout from '../components/Layout'
-import React, { useEffect } from 'react'
-import { init } from '../libs/t'
 
 const IndexPage = () => {
-  const kanvas = React.createRef();
-  let count = 100; 
-  useEffect(() => {
-    document.title = `You clicked ${count} times`;
-    init(kanvas);
-  });
 
   return <>
     <Layout title="wts">
@@ -20,7 +12,6 @@ const IndexPage = () => {
         </Link>
       </p>
   
-      <div ref={kanvas} />
     </Layout>
   </>
 }
